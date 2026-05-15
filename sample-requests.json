@@ -1,0 +1,56 @@
+{
+  "auth": {
+    "register": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/register",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Admin User",
+        "email": "admin@example.com",
+        "password": "password123",
+        "role": "admin"
+      }
+    },
+    "login": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/auth/login",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "email": "admin@example.com",
+        "password": "password123"
+      }
+    },
+    "profile": {
+      "method": "GET",
+      "url": "http://localhost:5000/api/auth/profile",
+      "headers": {
+        "Authorization": "Bearer <YOUR_TOKEN>"
+      }
+    }
+  },
+  "movies": {
+    "getAll": {
+      "method": "GET",
+      "url": "http://localhost:5000/api/movies"
+    },
+    "create": {
+      "method": "POST",
+      "url": "http://localhost:5000/api/movies",
+      "headers": {
+        "Authorization": "Bearer <YOUR_TOKEN>"
+      },
+      "formData": {
+        "title": "Inception",
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology.",
+        "genre": "Sci-Fi",
+        "rating": 9,
+        "releaseYear": 2010,
+        "poster": "<FILE_UPLOAD>"
+      }
+    }
+  }
+}
